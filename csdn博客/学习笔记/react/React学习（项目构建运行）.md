@@ -13,3 +13,7 @@
 &nbsp;&nbsp;因为使用idea创建的项目会有demo代码自动添加进去，所以添加样例代码倒是用不到了。
 
 &nbsp;&nbsp;如果有了样例代码则可以直接运行项目了，在命令行中执行**npm start**命令即可，如果想要打包使用**npm  run build**即可。
+
+## 3、修改请求运行端口号
+
+参考：[https://blog.csdn.net/weng423811758/article/details/77892770](https://blog.csdn.net/weng423811758/article/details/77892770)

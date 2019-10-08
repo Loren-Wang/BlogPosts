@@ -10,36 +10,25 @@
 
    5、unzip，压缩包解压工具，安装环境使用；
 
-   
+# 第一步：系统安装前准备
 
-
-# 第一步：系统安装前准备 #
     因为使用的是阿里云服务器，所以就用不上系统本身的防火墙，所以就要将防火墙进行关闭，同时禁止防火墙自启,至于端口开放则在安全组里面设置即可
 
 **关闭防火墙：**
 
     systemctl stop firewalld.service
-    
+
 **关闭防火墙开机自启动功能：**
 
     systemctl disable firewalld.service
 
-
-
-
-
-
-
-# 第二步：安装jdk #
+# 第二步：安装jdk
 
    **1、下载jdk：**[http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html "http://www.oracle.com/technetwork/java/javase/downloads/index.html")
 
     例如：curl -L "http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-linux-x64.tar.gz" -H "Cookie: oraclelicense=accept-securebackup-cookie"  -H "Connection: keep-alive" -O
 
-
    如果发生了下载了不能用的错误则参考：[https://www.linuxidc.com/Linux/2016-10/135925.htm](https://www.linuxidc.com/Linux/2016-10/135925.htm "https://www.linuxidc.com/Linux/2016-10/135925.htm")
-
-
 
    **2、新建一个目录：**
 
@@ -59,27 +48,19 @@
              export CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib
              export PATH=$JAVA_HOME/bin:$PATH
 
-
    **5、加载环境变量**
-     
+
     source /etc/profile
 
    **6、测试，当出现 jdk 版本信息时，表示 JDK 已经安装成功。**
 
     java -version
 
+# 第三步：安装gradle
 
-
-
-
-
-
-
-# 第三步：安装gradle #
    **1、下载安装包：**[https://gradle.org/releases/](https://gradle.org/releases/ "https://gradle.org/releases/")
 
    例如：`wget https://downloads.gradle.org/distributions/gradle-4.8-all.zip`
-
 
    **2、新建一个目录：**
 
@@ -98,21 +79,18 @@
              GRADLE_HOME=/usr/gradle/gradle-4.8
              export PATH=${GRADLE_HOME}/bin:${PATH}
 
-
    **5、加载环境变量**
-     
+
     source /etc/profile
 
    **6、测试，当出现 gradle 版本信息时，表示 gradle 已经安装成功。**
 
     gradle -version
 
-
-
-# 第四步：安装git #
+# 第四步：安装git
 
    这个安装很简单：`yum install git`一行代码就ok
 
+# 第五步：安装screen
 
-# 第五步：安装screen #
   和第四步一样：`yum install screen`
