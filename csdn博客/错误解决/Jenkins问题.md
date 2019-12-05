@@ -2,8 +2,6 @@
 
 2、Jenkins在部署jar包时构建结束进程被杀
 
-
-
 ### 1、Jenkins在运行但是却无法访问
 
 &nbsp;&nbsp;确认/var/cache/jenkins /var/log/jenkins这两个目录是否存在，不存在则创建。
