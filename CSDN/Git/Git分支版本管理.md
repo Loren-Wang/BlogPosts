@@ -89,6 +89,38 @@ git log -1
 
 ## 测试结束后部署正式脚本
 
+``` shell
+#!/usr/bin/env bash
+#测试完成之后的部署脚本
+
+#cd Project 切换到项目根目录
+
+#切换到主分支拉取最新代码
+git checkout master
+git pull --rebase
+#删除当前预发布分支，并从远端检出最新的预发布分支
+git pull origin master_ready:master_ready
+#合并预发布分支
+git merge master_ready
+#合并结束后推送最新代码到远端
+git push origin origin master:master
+
+
+#推送完成之后开始部署编译代码
+
+
+#部署结束之后反合最新代码到develop,先删除本地develop
+git branch -D develop
+#拉取最新develop代码
+git push origin develop:develop
+#切换到开发分支合并最新master代码，如果失败也不用处理，成功就推送最新代码到远端
+git checkout develop
+git merge master
+git push origin develop:develop
+
+
+
+```
 
 
 
