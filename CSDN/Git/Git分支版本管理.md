@@ -152,10 +152,7 @@ git checkout -b test
 #打印当前最新提交
 git log -1
 
-
 #切换完成之后开始编译代码
-
-
 
 ```
 
