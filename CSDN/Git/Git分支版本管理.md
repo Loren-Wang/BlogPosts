@@ -12,7 +12,40 @@
 
 
 ## 下面来一张我自己所理解到的Git分支管理的流程图
-![自己所理解的流程图](http://blogpic.momentsoflife.work/git分支管理.png)
+
+
+![enter description here](http://blogpic.momentsoflife.work/git分支管理.png)
+
+&emsp;&emsp;下面说下我图里面的所有相关分支信息 
+
+ - ***Master分支：*** 主分支，用来发布生产环境代码或者说线上代码，只有项目管理员
+ - ***Develop分支：*** 开发分支，所有的开发
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
