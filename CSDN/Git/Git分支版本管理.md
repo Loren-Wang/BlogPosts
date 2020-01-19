@@ -12,6 +12,8 @@
 
 
 ## 下面来一张我自己所理解到的Git分支管理的流程图
-![enter description here](http://blogpic.momentsoflife.work/git分支管理.png)
+![自己所理解的流程图](http://blogpic.momentsoflife.work/git分支管理.png)
+
+
 
 
