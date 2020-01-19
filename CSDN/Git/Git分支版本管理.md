@@ -122,6 +122,43 @@ git push origin develop:develop
 
 ```
 
+## 修复完成后测试部署脚本
+
+``` shell
+#!/usr/bin/env bash
+#开发人员开发完成后部署测试的脚本
+
+#cd Project 切换到项目根目录
+
+#切换到主分支拉取最新代码
+git checkout master
+git pull --rebase
+#切换到修复分支拉取最新代码
+git checkout fix
+git pull --rebase
+#删除预发布分支
+git branch | grep -w "master_ready" | xargs git branch -D
+#删除测试分支
+git branch | grep -w "test" | xargs git branch -D
+#从develop分支上新建预发布分支
+git checkout -b master_ready
+#合并master分支保证最新代码
+git merge master
+#当前预发布代码是最新代码，删除远端预发布代码,删除后更新当前代码为远端最新代码
+git push origin :master_ready
+git push origin master_ready:master_ready
+#更新完成后从当前分支上新建测试分支
+git checkout -b test
+#打印当前最新提交
+git log -1
+
+
+#切换完成之后开始编译代码
+
+
+
+```
+
 
 
 
